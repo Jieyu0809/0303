@@ -20,8 +20,8 @@ function setup() {
   dropdown = createSelect(); // 創建下拉式選單
   dropdown.position((width - dropdown.width) / 1.64, 12); // 將下拉式選單移到顏色選擇器下方中間
   dropdown.option('淡江大學首頁');
-  dropdown.option('淡江教科首頁');
-  dropdown.option('HACKMD');
+  dropdown.option('第三周作品');
+  dropdown.option('第三周講義');
   dropdown.changed(openLink); // 設定選單改變時執行的程式碼
   
   clearButton = createButton('清除iFrame'); // 創建清除按鈕
@@ -67,9 +67,9 @@ function openLink() {
   iframe.show();
   if (selected === '淡江大學首頁') {
     iframe.attribute('src', 'https://www.tku.edu.tw/');
-  } else if (selected === '淡江教科首頁') {
-    iframe.attribute('src', 'https://www.et.tku.edu.tw/');
-  } else if (selected === 'HACKMD') {
+  } else if (selected === '第三周作品') {
+    iframe.attribute('src', 'https://jieyu0809.github.io/0303/');
+  } else if (selected === '第三周講義') {
     iframe.attribute('src', 'https://hackmd.io/@Jieyu0809/r1KWfFMiJl');
   }
 }
